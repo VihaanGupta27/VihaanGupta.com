@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vihaan Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vihaan | Commerce Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <style>
 
@@ -11,92 +15,232 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:Arial;
       scroll-behavior:smooth;
+      font-family:Arial, sans-serif;
     }
 
     body{
-      background:#0f0f0f;
+      background:linear-gradient(to bottom,#0b0f19,#111827);
       color:white;
+      overflow-x:hidden;
     }
 
     nav{
       position:fixed;
       width:100%;
       top:0;
-      padding:20px 50px;
+      left:0;
+      padding:20px 8%;
       display:flex;
       justify-content:space-between;
-      background:#111;
+      align-items:center;
+      background:rgba(0,0,0,0.5);
+      backdrop-filter:blur(10px);
       z-index:1000;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    nav h2{
+      color:#00ff99;
+      text-shadow:0 0 15px #00ff99;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
     }
 
     nav a{
       color:white;
       text-decoration:none;
-      margin-left:20px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#00ff99;
     }
 
     .hero{
-      height:100vh;
+      min-height:100vh;
       display:flex;
       flex-direction:column;
       justify-content:center;
       align-items:center;
       text-align:center;
+      padding:0 20px;
     }
 
     .hero h1{
-      font-size:70px;
+      font-size:clamp(3rem,8vw,6rem);
+      margin-bottom:20px;
     }
 
     .hero span{
       color:#00ff99;
+      text-shadow:0 0 25px #00ff99;
     }
 
     .hero p{
-      margin-top:20px;
-      font-size:20px;
-      color:gray;
+      max-width:700px;
+      color:#b0b0b0;
+      font-size:1.2rem;
+      line-height:1.8;
+    }
+
+    .btn{
+      margin-top:35px;
+      padding:14px 30px;
+      border:none;
+      border-radius:12px;
+      background:#00ff99;
+      color:black;
+      font-size:1rem;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 0 20px rgba(0,255,153,0.4);
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+      box-shadow:0 0 30px rgba(0,255,153,0.7);
     }
 
     section{
-      padding:100px 50px;
+      padding:100px 8%;
     }
 
-    .about,
-    .projects{
-      max-width:1000px;
+    .section-title{
+      font-size:3rem;
+      margin-bottom:50px;
+      text-align:center;
+      color:#00ff99;
+    }
+
+    .about{
+      text-align:center;
+      max-width:900px;
       margin:auto;
+      line-height:1.9;
+      color:#c7c7c7;
+      font-size:1.1rem;
     }
 
-    h2{
-      font-size:40px;
-      margin-bottom:30px;
-    }
-
-    .project-grid{
+    .stats{
+      margin-top:50px;
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
     }
 
-    .card{
-      background:#1a1a1a;
-      padding:20px;
-      border-radius:15px;
+    .stat-card{
+      background:rgba(255,255,255,0.05);
+      padding:30px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,0.08);
       transition:0.3s;
+      text-align:center;
     }
 
-    .card:hover{
+    .stat-card:hover{
       transform:translateY(-10px);
-      background:#222;
+      border-color:#00ff99;
+      box-shadow:0 0 25px rgba(0,255,153,0.2);
+    }
+
+    .stat-card h3{
+      font-size:2rem;
+      color:#00ff99;
+      margin-bottom:10px;
+    }
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .project-card{
+      background:rgba(255,255,255,0.05);
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .project-card:hover{
+      transform:translateY(-10px);
+      border-color:#00ff99;
+      box-shadow:0 0 30px rgba(0,255,153,0.15);
+    }
+
+    .project-card h3{
+      margin-bottom:15px;
+      color:#00ff99;
+    }
+
+    .project-card p{
+      color:#c0c0c0;
+      line-height:1.7;
+    }
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      color:#c0c0c0;
+      margin-top:10px;
     }
 
     footer{
       text-align:center;
-      padding:40px;
-      color:gray;
+      padding:30px;
+      color:#888;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    .bg-circle{
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:#00ff99;
+      opacity:0.08;
+      filter:blur(120px);
+      border-radius:50%;
+      z-index:-1;
+    }
+
+    .circle1{
+      top:-100px;
+      left:-100px;
+    }
+
+    .circle2{
+      bottom:-100px;
+      right:-100px;
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        gap:15px;
+      }
+
+      .hero p{
+        font-size:1rem;
+      }
+
+      .section-title{
+        font-size:2.2rem;
+      }
+
     }
 
   </style>
@@ -104,66 +248,133 @@
 
 <body>
 
-  <nav>
-    <h3>Vihaan</h3>
+  <div class="bg-circle circle1"></div>
+  <div class="bg-circle circle2"></div>
 
-    <div>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-    </div>
+  <nav>
+
+    <h2>Vihaan</h2>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
   </nav>
 
-  <div class="hero">
+  <section class="hero">
 
     <h1>
-      Hi, I'm <span>Vihaan</span>
+      Future <span>Commerce Leader</span>
     </h1>
 
     <p>
-      Student • Developer • Creator
+      Commerce student passionate about finance, investing,
+      entrepreneurship, technology, and business growth.
+      Building skills for the future one project at a time.
     </p>
 
-  </div>
-
-  <section id="about" class="about">
-
-    <h2>About Me</h2>
-
-    <p>
-      I am learning web development and building cool projects.
-      I enjoy coding, design, and creating websites.
-    </p>
+    <button class="btn" onclick="scrollToProjects()">
+      Explore Projects
+    </button>
 
   </section>
 
-  <section id="projects" class="projects">
+  <section id="about">
 
-    <h2>Projects</h2>
+    <h2 class="section-title">About Me</h2>
 
-    <div class="project-grid">
+    <div class="about">
 
-      <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>My personal portfolio website.</p>
-      </div>
+      <p>
+        I am a commerce student interested in financial markets,
+        business strategy, investing, economics, and technology.
+        I enjoy learning modern skills, building projects, and
+        exploring opportunities in entrepreneurship and finance.
+      </p>
 
-      <div class="card">
-        <h3>Minecraft Project</h3>
-        <p>A custom Minecraft world/server build.</p>
-      </div>
+      <div class="stats">
 
-      <div class="card">
-        <h3>School Projects</h3>
-        <p>Creative projects and experiments.</p>
+        <div class="stat-card">
+          <h3>Finance</h3>
+          <p>Learning investing and market analysis</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Business</h3>
+          <p>Exploring entrepreneurship and startups</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Technology</h3>
+          <p>Building modern websites and projects</p>
+        </div>
+
       </div>
 
     </div>
+
+  </section>
+
+  <section id="projects">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>Stock Market Tracker</h3>
+        <p>
+          A finance-themed website concept for monitoring
+          stock prices and investment portfolios.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Business Portfolio</h3>
+        <p>
+          A modern portfolio website inspired by professional
+          entrepreneurs and finance creators.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Investment Research</h3>
+        <p>
+          Exploring business case studies, investing strategies,
+          and financial market concepts.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="contact" class="contact">
+
+    <h2 class="section-title">Contact</h2>
+
+    <p>Email: yourmail@example.com</p>
+
+    <p>
+      Built with HTML & CSS • Hosted on GitHub Pages
+    </p>
 
   </section>
 
   <footer>
-    © 2026 Vihaan
+    © 2026 Vihaan • Commerce Portfolio
   </footer>
+
+  <script>
+
+    function scrollToProjects(){
+      document.getElementById("projects")
+      .scrollIntoView({behavior:"smooth"});
+    }
+
+  </script>
 
 </body>
 </html>
