@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Vihaan | Commerce Portfolio</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <style>
 
@@ -16,7 +13,7 @@
       padding:0;
       box-sizing:border-box;
       scroll-behavior:smooth;
-      font-family:Arial, sans-serif;
+      font-family:Arial,sans-serif;
     }
 
     body{
@@ -36,8 +33,8 @@
       align-items:center;
       background:rgba(0,0,0,0.5);
       backdrop-filter:blur(10px);
-      z-index:1000;
       border-bottom:1px solid rgba(255,255,255,0.08);
+      z-index:1000;
     }
 
     nav h2{
@@ -76,9 +73,18 @@
       margin-bottom:20px;
     }
 
-    .hero span{
+    #typing{
       color:#00ff99;
       text-shadow:0 0 25px #00ff99;
+      border-right:3px solid #00ff99;
+      padding-right:5px;
+      animation:blink 0.7s infinite;
+    }
+
+    @keyframes blink{
+      50%{
+        border-color:transparent;
+      }
     }
 
     .hero p{
@@ -141,6 +147,7 @@
       border:1px solid rgba(255,255,255,0.08);
       transition:0.3s;
       text-align:center;
+      backdrop-filter:blur(10px);
     }
 
     .stat-card:hover{
@@ -167,6 +174,7 @@
       border-radius:20px;
       transition:0.3s;
       border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(10px);
     }
 
     .project-card:hover{
@@ -266,7 +274,7 @@
   <section class="hero">
 
     <h1>
-      Future <span>Commerce Leader</span>
+      Future <span id="typing"></span>
     </h1>
 
     <p>
@@ -325,6 +333,7 @@
 
       <div class="project-card">
         <h3>Stock Market Tracker</h3>
+
         <p>
           A finance-themed website concept for monitoring
           stock prices and investment portfolios.
@@ -333,6 +342,7 @@
 
       <div class="project-card">
         <h3>Business Portfolio</h3>
+
         <p>
           A modern portfolio website inspired by professional
           entrepreneurs and finance creators.
@@ -341,6 +351,7 @@
 
       <div class="project-card">
         <h3>Investment Research</h3>
+
         <p>
           Exploring business case studies, investing strategies,
           and financial market concepts.
@@ -358,7 +369,7 @@
     <p>Email: yourmail@example.com</p>
 
     <p>
-      Built with HTML & CSS • Hosted on GitHub Pages
+      Built with HTML, CSS & JavaScript • Hosted on GitHub Pages
     </p>
 
   </section>
@@ -369,9 +380,53 @@
 
   <script>
 
+    const text = [
+      "Commerce Leader",
+      "Finance Enthusiast",
+      "Future Entrepreneur",
+      "Business Mind"
+    ];
+
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+
+    (function type(){
+
+      if(count === text.length){
+        count = 0;
+      }
+
+      currentText = text[count];
+
+      letter = currentText.slice(0, ++index);
+
+      document.getElementById("typing")
+      .textContent = letter;
+
+      if(letter.length === currentText.length){
+
+        count++;
+        index = 0;
+
+        setTimeout(type,1000);
+
+      }else{
+
+        setTimeout(type,100);
+
+      }
+
+    })();
+
     function scrollToProjects(){
+
       document.getElementById("projects")
-      .scrollIntoView({behavior:"smooth"});
+      .scrollIntoView({
+        behavior:"smooth"
+      });
+
     }
 
   </script>
