@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Vihaan | Commerce Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vihaan Gupta | Commerce Portfolio</title>
 
   <style>
 
@@ -24,9 +25,8 @@
 
     nav{
       position:fixed;
-      width:100%;
       top:0;
-      left:0;
+      width:100%;
       padding:20px 8%;
       display:flex;
       justify-content:space-between;
@@ -46,12 +46,15 @@
       display:flex;
       list-style:none;
       gap:25px;
+      flex-wrap:wrap;
+      justify-content:center;
     }
 
     nav a{
       color:white;
       text-decoration:none;
       transition:0.3s;
+      font-size:15px;
     }
 
     nav a:hover{
@@ -65,17 +68,27 @@
       justify-content:center;
       align-items:center;
       text-align:center;
-      padding:0 20px;
+      padding:120px 20px 40px;
+    }
+
+    .profile-pic{
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      border:4px solid #00ff99;
+      margin-bottom:30px;
+      object-fit:cover;
+      box-shadow:0 0 35px rgba(0,255,153,0.5);
     }
 
     .hero h1{
-      font-size:clamp(3rem,8vw,6rem);
+      font-size:clamp(3rem,8vw,5.5rem);
       margin-bottom:20px;
     }
 
     #typing{
       color:#00ff99;
-      text-shadow:0 0 25px #00ff99;
+      text-shadow:0 0 20px #00ff99;
       border-right:3px solid #00ff99;
       padding-right:5px;
       animation:blink 0.7s infinite;
@@ -88,29 +101,28 @@
     }
 
     .hero p{
-      max-width:700px;
-      color:#b0b0b0;
-      font-size:1.2rem;
+      color:#c0c0c0;
+      max-width:800px;
       line-height:1.8;
+      font-size:1.15rem;
     }
 
     .btn{
       margin-top:35px;
-      padding:14px 30px;
+      padding:15px 35px;
       border:none;
       border-radius:12px;
       background:#00ff99;
       color:black;
-      font-size:1rem;
       font-weight:bold;
       cursor:pointer;
       transition:0.3s;
-      box-shadow:0 0 20px rgba(0,255,153,0.4);
+      box-shadow:0 0 25px rgba(0,255,153,0.4);
     }
 
     .btn:hover{
       transform:translateY(-5px);
-      box-shadow:0 0 30px rgba(0,255,153,0.7);
+      box-shadow:0 0 35px rgba(0,255,153,0.8);
     }
 
     section{
@@ -118,88 +130,55 @@
     }
 
     .section-title{
+      text-align:center;
       font-size:3rem;
       margin-bottom:50px;
-      text-align:center;
       color:#00ff99;
     }
 
-    .about{
-      text-align:center;
-      max-width:900px;
-      margin:auto;
-      line-height:1.9;
-      color:#c7c7c7;
-      font-size:1.1rem;
-    }
-
-    .stats{
-      margin-top:50px;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:25px;
-    }
-
-    .stat-card{
-      background:rgba(255,255,255,0.05);
-      padding:30px;
-      border-radius:20px;
-      border:1px solid rgba(255,255,255,0.08);
-      transition:0.3s;
-      text-align:center;
-      backdrop-filter:blur(10px);
-    }
-
-    .stat-card:hover{
-      transform:translateY(-10px);
-      border-color:#00ff99;
-      box-shadow:0 0 25px rgba(0,255,153,0.2);
-    }
-
-    .stat-card h3{
-      font-size:2rem;
-      color:#00ff99;
-      margin-bottom:10px;
-    }
-
-    .projects-grid{
+    .card-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
       gap:30px;
     }
 
-    .project-card{
+    .card{
       background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(10px);
       padding:30px;
       border-radius:20px;
       transition:0.3s;
-      border:1px solid rgba(255,255,255,0.08);
-      backdrop-filter:blur(10px);
     }
 
-    .project-card:hover{
+    .card:hover{
       transform:translateY(-10px);
       border-color:#00ff99;
       box-shadow:0 0 30px rgba(0,255,153,0.15);
     }
 
-    .project-card h3{
-      margin-bottom:15px;
+    .card h3{
       color:#00ff99;
+      margin-bottom:15px;
     }
 
-    .project-card p{
-      color:#c0c0c0;
+    .card p,
+    .card li{
+      color:#c7c7c7;
       line-height:1.7;
     }
 
-    .contact{
-      text-align:center;
+    ul{
+      padding-left:20px;
     }
 
-    .contact p{
-      color:#c0c0c0;
-      margin-top:10px;
+    .vision{
+      max-width:900px;
+      margin:auto;
+      text-align:center;
+      color:#c7c7c7;
+      line-height:1.9;
+      font-size:1.1rem;
     }
 
     footer{
@@ -230,7 +209,12 @@
       right:-100px;
     }
 
-    @media(max-width:768px){
+    .email{
+      color:#00ff99;
+      text-decoration:none;
+    }
+
+    @media(max-width:900px){
 
       nav{
         flex-direction:column;
@@ -252,6 +236,7 @@
     }
 
   </style>
+
 </head>
 
 <body>
@@ -261,11 +246,15 @@
 
   <nav>
 
-    <h2>Vihaan</h2>
+    <h2>Vihaan Gupta</h2>
 
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#dream">Dream</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -273,18 +262,22 @@
 
   <section class="hero">
 
+    <img 
+      src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+      alt="Profile Picture"
+      class="profile-pic"
+    >
+
     <h1>
       Future <span id="typing"></span>
     </h1>
 
     <p>
-      Commerce student passionate about finance, investing,
-      entrepreneurship, technology, and business growth.
-      Building skills for the future one project at a time.
+      Commerce Student & Future CGO/CFO
     </p>
 
-    <button class="btn" onclick="scrollToProjects()">
-      Explore Projects
+    <button class="btn" onclick="scrollToSection('projects')">
+      Explore Portfolio
     </button>
 
   </section>
@@ -293,33 +286,15 @@
 
     <h2 class="section-title">About Me</h2>
 
-    <div class="about">
+    <div class="vision">
 
       <p>
-        I am a commerce student interested in financial markets,
-        business strategy, investing, economics, and technology.
-        I enjoy learning modern skills, building projects, and
-        exploring opportunities in entrepreneurship and finance.
+        My name is Vihaan Gupta. I am passionate about finance,
+        corporate governance, investing, entrepreneurship,
+        and business leadership. I enjoy researching financial
+        systems, developing ideas, and building projects that
+        can create real-world impact in the finance and corporate sector.
       </p>
-
-      <div class="stats">
-
-        <div class="stat-card">
-          <h3>Finance</h3>
-          <p>Learning investing and market analysis</p>
-        </div>
-
-        <div class="stat-card">
-          <h3>Business</h3>
-          <p>Exploring entrepreneurship and startups</p>
-        </div>
-
-        <div class="stat-card">
-          <h3>Technology</h3>
-          <p>Building modern websites and projects</p>
-        </div>
-
-      </div>
 
     </div>
 
@@ -329,62 +304,208 @@
 
     <h2 class="section-title">Projects</h2>
 
-    <div class="projects-grid">
+    <div class="card-grid">
 
-      <div class="project-card">
-        <h3>Stock Market Tracker</h3>
+      <div class="card">
+
+        <h3>A Countr</h3>
 
         <p>
-          A finance-themed website concept for monitoring
-          stock prices and investment portfolios.
+          <strong>Status:</strong> Working On
         </p>
+
+        <br>
+
+        <p>
+          An app that helps users calculate and manage personal
+          or company finances — from small numbers to trillions.
+        </p>
+
       </div>
 
-      <div class="project-card">
-        <h3>Business Portfolio</h3>
+      <div class="card">
+
+        <h3>Personal Portfolio Website</h3>
 
         <p>
-          A modern portfolio website inspired by professional
-          entrepreneurs and finance creators.
+          <strong>Status:</strong> Completed
         </p>
-      </div>
 
-      <div class="project-card">
-        <h3>Investment Research</h3>
+        <br>
 
         <p>
-          Exploring business case studies, investing strategies,
-          and financial market concepts.
+          A professional commerce-themed portfolio website
+          built using HTML, CSS, and JavaScript.
         </p>
+
       </div>
 
     </div>
 
   </section>
 
-  <section id="contact" class="contact">
+  <section id="interests">
+
+    <h2 class="section-title">Extracurricular Interests</h2>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Investing</h3>
+        <p>Exploring financial markets and investment strategies.</p>
+      </div>
+
+      <div class="card">
+        <h3>Acting</h3>
+        <p>Participating in theatrical performances and mime.</p>
+      </div>
+
+      <div class="card">
+        <h3>Public Speaking</h3>
+        <p>Building confidence and communication skills.</p>
+      </div>
+
+      <div class="card">
+        <h3>Finance Research</h3>
+        <p>Learning about economics, governance, and markets.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="achievements">
+
+    <h2 class="section-title">Achievements</h2>
+
+    <div class="card-grid">
+
+      <div class="card">
+
+        <h3>Theatron 2025</h3>
+
+        <p>
+          3rd Prize in Mime at Theatron 2025,
+          DPS RK Puram.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Confluence 2023</h3>
+
+        <p>
+          2nd Prize in Personnalité Française
+          at Confluence 2023,
+          Alchon Public School.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Portfolio Website</h3>
+
+        <p>
+          Built and deployed a fully responsive
+          personal portfolio website.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="vision">
+
+    <h2 class="section-title">My Vision</h2>
+
+    <div class="vision">
+
+      <p>
+        I want to build a career in finance and corporate governance,
+        and eventually become a CGO (Chief Governance Officer)
+        or a CFO (Chief Financial Officer). My goal is to contribute
+        to ethical business leadership, financial excellence,
+        and strategic decision-making in the corporate world.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section id="dream">
+
+    <h2 class="section-title">Dream Colleges & Exams</h2>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>SRCC</h3>
+        <p>Shri Ram College of Commerce</p>
+      </div>
+
+      <div class="card">
+        <h3>DU</h3>
+        <p>University of Delhi</p>
+      </div>
+
+      <div class="card">
+        <h3>IICA</h3>
+        <p>Indian Institute of Corporate Affairs</p>
+      </div>
+
+      <div class="card">
+        <h3>CA</h3>
+        <p>Chartered Accountant</p>
+      </div>
+
+      <div class="card">
+        <h3>CUET</h3>
+        <p>Common University Entrance Test</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="contact">
 
     <h2 class="section-title">Contact</h2>
 
-    <p>Email: yourmail@example.com</p>
+    <div class="vision">
 
-    <p>
-      Built with HTML, CSS & JavaScript • Hosted on GitHub Pages
-    </p>
+      <p>
+        Email:
+        <a class="email" href="mailto:vihaan27gupta@gmail.com">
+          vihaan27gupta@gmail.com
+        </a>
+      </p>
+
+      <br>
+
+      <p>
+        Built with HTML, CSS & JavaScript • Hosted on GitHub Pages
+      </p>
+
+    </div>
 
   </section>
 
   <footer>
-    © 2026 Vihaan • Commerce Portfolio
+    © 2026 Vihaan Gupta • Commerce Portfolio
   </footer>
 
   <script>
 
     const text = [
+      "CGO",
+      "CFO",
       "Commerce Leader",
       "Finance Enthusiast",
-      "Future Entrepreneur",
-      "Business Mind"
+      "Entrepreneur"
     ];
 
     let count = 0;
@@ -402,15 +523,15 @@
 
       letter = currentText.slice(0, ++index);
 
-      document.getElementById("typing")
-      .textContent = letter;
+      document.getElementById("typing").textContent = letter;
 
       if(letter.length === currentText.length){
 
         count++;
+
         index = 0;
 
-        setTimeout(type,1000);
+        setTimeout(type,1200);
 
       }else{
 
@@ -420,10 +541,9 @@
 
     })();
 
-    function scrollToProjects(){
+    function scrollToSection(id){
 
-      document.getElementById("projects")
-      .scrollIntoView({
+      document.getElementById(id).scrollIntoView({
         behavior:"smooth"
       });
 
