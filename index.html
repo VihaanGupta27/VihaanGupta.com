@@ -49,8 +49,6 @@
       overflow-x:hidden;
     }
 
-    /* Background Glow */
-
     .bg-circle{
       position:fixed;
       width:500px;
@@ -72,8 +70,6 @@
       bottom:-150px;
       right:-150px;
     }
-
-    /* Navbar */
 
     nav{
       position:fixed;
@@ -114,8 +110,6 @@
       color:var(--gold);
     }
 
-    /* Hero */
-
     .hero{
       min-height:100vh;
       padding:140px 8% 80px;
@@ -142,18 +136,9 @@
       margin-bottom:20px;
     }
 
-    #typing{
+    .highlight{
       color:var(--gold);
-      text-shadow:0 0 15px rgba(212,175,55,0.4);
-      border-right:3px solid var(--gold);
-      padding-right:5px;
-      animation:blink 0.7s infinite;
-    }
-
-    @keyframes blink{
-      50%{
-        border-color:transparent;
-      }
+      text-shadow:0 0 15px rgba(212,175,55,0.35);
     }
 
     .hero-subtitle{
@@ -215,8 +200,6 @@
       box-shadow:0 25px 60px rgba(0,0,0,0.45);
     }
 
-    /* Sections */
-
     section{
       padding:110px 8%;
     }
@@ -234,8 +217,6 @@
       color:var(--muted);
       margin-bottom:55px;
     }
-
-    /* Cards */
 
     .card-grid{
       display:grid;
@@ -277,8 +258,6 @@
       line-height:1.9;
       font-size:1.1rem;
     }
-
-    /* Timeline */
 
     .timeline{
       max-width:900px;
@@ -327,8 +306,6 @@
       line-height:1.8;
     }
 
-    /* Contact */
-
     .contact-box{
       max-width:700px;
       margin:auto;
@@ -345,8 +322,6 @@
       color:var(--gold);
       text-decoration:none;
     }
-
-    /* Footer */
 
     footer{
       padding:50px 8%;
@@ -384,8 +359,6 @@
       font-size:0.95rem;
       color:#64748b;
     }
-
-    /* Responsive */
 
     @media(max-width:1000px){
 
@@ -436,12 +409,8 @@
 
 <body>
 
-  <!-- Background -->
-
   <div class="bg-circle circle1"></div>
   <div class="bg-circle circle2"></div>
-
-  <!-- Navbar -->
 
   <nav>
 
@@ -458,14 +427,12 @@
 
   </nav>
 
-  <!-- Hero -->
-
   <section class="hero">
 
     <div class="hero-left">
 
       <h1>
-        Future <span id="typing"></span>
+        Future <span class="highlight">CFO & Corporate Leader</span>
       </h1>
 
       <p class="hero-subtitle">
@@ -489,7 +456,7 @@
 
         <a
           href="resume.pdf"
-          download
+          target="_blank"
           class="btn secondary-btn"
         >
           Download Resume
@@ -510,8 +477,6 @@
     </div>
 
   </section>
-
-  <!-- About -->
 
   <section id="about">
 
@@ -534,8 +499,6 @@
     </div>
 
   </section>
-
-  <!-- Skills -->
 
   <section id="skills">
 
@@ -583,8 +546,6 @@
     </div>
 
   </section>
-
-  <!-- Projects -->
 
   <section id="projects">
 
@@ -649,8 +610,6 @@
 
   </section>
 
-  <!-- Achievements -->
-
   <section id="achievements">
 
     <h2 class="section-title">Achievements</h2>
@@ -695,8 +654,6 @@
 
   </section>
 
-  <!-- Vision -->
-
   <section id="vision">
 
     <h2 class="section-title">My Vision</h2>
@@ -717,8 +674,6 @@
     </div>
 
   </section>
-
-  <!-- Roadmap -->
 
   <section id="roadmap">
 
@@ -765,8 +720,6 @@
 
   </section>
 
-  <!-- Academic Goals -->
-
   <section id="goals">
 
     <h2 class="section-title">Academic Goals</h2>
@@ -812,8 +765,6 @@
     </div>
 
   </section>
-
-  <!-- Contact -->
 
   <section id="contact">
 
@@ -866,8 +817,6 @@
 
   </section>
 
-  <!-- Footer -->
-
   <footer>
 
     <h3>Vihaan Gupta</h3>
@@ -897,50 +846,7 @@
 
   </footer>
 
-  <!-- JavaScript -->
-
   <script>
-
-    const text = [
-      "CFO",
-      "CGO",
-      "Finance Leader",
-      "Entrepreneur",
-      "Corporate Strategist"
-    ];
-
-    let count = 0;
-    let index = 0;
-    let currentText = "";
-    let letter = "";
-
-    (function type(){
-
-      if(count === text.length){
-        count = 0;
-      }
-
-      currentText = text[count];
-
-      letter = currentText.slice(0, ++index);
-
-      document.getElementById("typing").textContent = letter;
-
-      if(letter.length === currentText.length){
-
-        count++;
-
-        index = 0;
-
-        setTimeout(type,1200);
-
-      }else{
-
-        setTimeout(type,100);
-
-      }
-
-    })();
 
     function scrollToSection(id){
 
@@ -953,4 +859,5 @@
   </script>
 
 </body>
+
 </html>
