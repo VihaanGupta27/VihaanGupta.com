@@ -13,6 +13,7 @@
     content="Vihaan Gupta - Commerce student, finance enthusiast, aspiring CFO/CGO, entrepreneur, and future corporate leader."
   />
 
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
 
   <!-- Google Fonts -->
@@ -49,6 +50,8 @@
       overflow-x:hidden;
     }
 
+    /* Background Glow */
+
     .bg-circle{
       position:fixed;
       width:500px;
@@ -71,6 +74,8 @@
       right:-150px;
     }
 
+    /* Navbar */
+
     nav{
       position:fixed;
       top:0;
@@ -79,7 +84,7 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
-      background:rgba(10,15,30,0.65);
+      background:rgba(10,15,30,0.7);
       backdrop-filter:blur(14px);
       border-bottom:1px solid rgba(255,255,255,0.06);
       z-index:1000;
@@ -110,6 +115,8 @@
       color:var(--gold);
     }
 
+    /* Hero Section */
+
     .hero{
       min-height:100vh;
       padding:140px 8% 80px;
@@ -138,12 +145,12 @@
 
     .highlight{
       color:var(--gold);
-      text-shadow:0 0 15px rgba(212,175,55,0.35);
+      text-shadow:0 0 18px rgba(212,175,55,0.35);
     }
 
     .hero-subtitle{
       color:var(--gold);
-      font-size:1.2rem;
+      font-size:1.15rem;
       margin-bottom:18px;
       letter-spacing:1px;
     }
@@ -200,6 +207,8 @@
       box-shadow:0 25px 60px rgba(0,0,0,0.45);
     }
 
+    /* Sections */
+
     section{
       padding:110px 8%;
     }
@@ -217,6 +226,8 @@
       color:var(--muted);
       margin-bottom:55px;
     }
+
+    /* Cards */
 
     .card-grid{
       display:grid;
@@ -258,6 +269,8 @@
       line-height:1.9;
       font-size:1.1rem;
     }
+
+    /* Timeline */
 
     .timeline{
       max-width:900px;
@@ -306,6 +319,8 @@
       line-height:1.8;
     }
 
+    /* Contact */
+
     .contact-box{
       max-width:700px;
       margin:auto;
@@ -322,6 +337,8 @@
       color:var(--gold);
       text-decoration:none;
     }
+
+    /* Footer */
 
     footer{
       padding:50px 8%;
@@ -359,6 +376,8 @@
       font-size:0.95rem;
       color:#64748b;
     }
+
+    /* Responsive */
 
     @media(max-width:1000px){
 
@@ -409,8 +428,12 @@
 
 <body>
 
+  <!-- Background -->
+
   <div class="bg-circle circle1"></div>
   <div class="bg-circle circle2"></div>
+
+  <!-- Navbar -->
 
   <nav>
 
@@ -427,6 +450,8 @@
 
   </nav>
 
+  <!-- Hero -->
+
   <section class="hero">
 
     <div class="hero-left">
@@ -440,9 +465,9 @@
       </p>
 
       <p class="hero-description">
-        Building toward a future in finance, governance, entrepreneurship,
-        and strategic leadership through business projects, learning,
-        and long-term vision.
+        Building toward a future in finance, governance,
+        entrepreneurship, and strategic leadership through
+        business projects, learning, and long-term vision.
       </p>
 
       <div class="hero-buttons">
@@ -454,8 +479,10 @@
           Explore Portfolio
         </button>
 
+        <!-- PERFECT PDF BUTTON -->
+
         <a
-          href="resume.pdf"
+          href="./Resume.pdf"
           target="_blank"
           class="btn secondary-btn"
         >
@@ -478,6 +505,8 @@
 
   </section>
 
+  <!-- About -->
+
   <section id="about">
 
     <h2 class="section-title">About Me</h2>
@@ -489,16 +518,26 @@
     <div class="vision">
 
       <p>
-        My name is Vihaan Gupta. I am a commerce student deeply interested in
-        finance, investing, corporate governance, entrepreneurship, and business
-        strategy. I aim to build a long-term career in the corporate and financial
-        world while continuously improving my leadership, communication,
-        and analytical skills.
+        I am a commerce student with a strong interest in finance,
+        investing, entrepreneurship, corporate governance, and business
+        leadership. I enjoy understanding how businesses operate,
+        how financial systems function, and how strategic decisions
+        drive long-term growth and success. Alongside academics,
+        I am actively developing my skills through independent projects
+        such as Fintrek, an accounting and business management platform
+        concept for Indian businesses, while also building my personal
+        portfolio and strengthening my knowledge of business strategy,
+        finance, and communication. I actively participate in
+        extracurricular activities including theatre and public speaking,
+        which have helped me improve my confidence, teamwork,
+        creativity, and leadership abilities.
       </p>
 
     </div>
 
   </section>
+
+  <!-- Skills -->
 
   <section id="skills">
 
@@ -515,8 +554,8 @@
         <h3>Finance</h3>
 
         <p>
-          Financial Analysis, Investing, Business Strategy,
-          Accounting Concepts, Corporate Governance
+          Financial Analysis, Investing,
+          Business Strategy, Corporate Governance
         </p>
 
       </div>
@@ -547,6 +586,8 @@
 
   </section>
 
+  <!-- Projects -->
+
   <section id="projects">
 
     <h2 class="section-title">Projects</h2>
@@ -568,8 +609,8 @@
         <br>
 
         <p>
-          Fintrek is an all-in-one accounting and business management
-          platform designed for Indian businesses.
+          Fintrek is an all-in-one accounting and business
+          management platform designed for Indian businesses.
         </p>
 
         <br>
@@ -599,9 +640,8 @@
         <br>
 
         <p>
-          A modern finance-themed portfolio website
-          showcasing my projects, achievements,
-          goals, and professional journey.
+          Designed and developed a modern finance-themed
+          personal portfolio website using HTML and CSS.
         </p>
 
       </div>
@@ -609,6 +649,8 @@
     </div>
 
   </section>
+
+  <!-- Achievements -->
 
   <section id="achievements">
 
@@ -645,7 +687,7 @@
         <h3>Portfolio Website</h3>
 
         <p>
-          Designed and deployed a personal portfolio website using HTML and CSS.
+          Built and deployed personal portfolio website.
         </p>
 
       </div>
@@ -653,6 +695,8 @@
     </div>
 
   </section>
+
+  <!-- Vision -->
 
   <section id="vision">
 
@@ -668,12 +712,14 @@
         I aspire to build a strong career in finance,
         governance, entrepreneurship, and corporate leadership,
         eventually becoming a CFO or CGO while contributing
-        to impactful business innovation.
+        to impactful business innovation and growth.
       </p>
 
     </div>
 
   </section>
+
+  <!-- Roadmap -->
 
   <section id="roadmap">
 
@@ -701,7 +747,8 @@
         <h3>Short Term</h3>
 
         <p>
-          CUET preparation • CA Foundation • Business projects • Internships
+          CUET preparation • CA Foundation •
+          Business projects • Internships
         </p>
 
       </div>
@@ -720,6 +767,8 @@
 
   </section>
 
+  <!-- Academic Goals -->
+
   <section id="goals">
 
     <h2 class="section-title">Academic Goals</h2>
@@ -735,8 +784,8 @@
         <h3>SRCC / DU</h3>
 
         <p>
-          Aspiring to pursue commerce and finance education
-          at top institutions.
+          Aspiring to pursue commerce and finance
+          education at top institutions.
         </p>
 
       </div>
@@ -757,7 +806,8 @@
         <h3>CUET</h3>
 
         <p>
-          Focused preparation for competitive undergraduate admissions.
+          Focused preparation for competitive
+          undergraduate admissions.
         </p>
 
       </div>
@@ -765,6 +815,8 @@
     </div>
 
   </section>
+
+  <!-- Contact -->
 
   <section id="contact">
 
@@ -816,6 +868,8 @@
     </div>
 
   </section>
+
+  <!-- Footer -->
 
   <footer>
 
