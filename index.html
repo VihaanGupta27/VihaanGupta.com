@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Vihaan Gupta | Commerce Portfolio</title>
+  <title>Vihaan Gupta | Finance Portfolio</title>
+
+  <meta
+    name="description"
+    content="Vihaan Gupta - Commerce student, finance enthusiast, aspiring CFO/CGO, entrepreneur, and future corporate leader."
+  />
+
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
 
@@ -14,14 +32,48 @@
       padding:0;
       box-sizing:border-box;
       scroll-behavior:smooth;
-      font-family:Arial,sans-serif;
+    }
+
+    :root{
+      --gold:#d4af37;
+      --navy:#0b1120;
+      --slate:#111827;
+      --white:#f3f4f6;
+      --muted:#cbd5e1;
     }
 
     body{
-      background:linear-gradient(to bottom,#0b0f19,#111827);
-      color:white;
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(to bottom,var(--navy),#0f172a);
+      color:var(--white);
       overflow-x:hidden;
     }
+
+    /* Background Glow */
+
+    .bg-circle{
+      position:fixed;
+      width:500px;
+      height:500px;
+      border-radius:50%;
+      filter:blur(140px);
+      opacity:0.08;
+      z-index:-1;
+    }
+
+    .circle1{
+      background:var(--gold);
+      top:-150px;
+      left:-150px;
+    }
+
+    .circle2{
+      background:#2563eb;
+      bottom:-150px;
+      right:-150px;
+    }
+
+    /* Navbar */
 
     nav{
       position:fixed;
@@ -31,15 +83,17 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
-      background:rgba(0,0,0,0.5);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(255,255,255,0.08);
+      background:rgba(10,15,30,0.65);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,0.06);
       z-index:1000;
     }
 
     nav h2{
-      color:#00ff99;
-      text-shadow:0 0 15px #00ff99;
+      font-family:'Playfair Display',serif;
+      color:var(--gold);
+      font-size:1.7rem;
+      letter-spacing:1px;
     }
 
     nav ul{
@@ -47,49 +101,51 @@
       list-style:none;
       gap:25px;
       flex-wrap:wrap;
-      justify-content:center;
     }
 
     nav a{
-      color:white;
+      color:var(--white);
       text-decoration:none;
-      transition:0.3s;
       font-size:15px;
+      transition:0.3s;
     }
 
     nav a:hover{
-      color:#00ff99;
+      color:var(--gold);
     }
+
+    /* Hero */
 
     .hero{
       min-height:100vh;
+      padding:140px 8% 80px;
       display:flex;
-      flex-direction:column;
-      justify-content:center;
+      justify-content:space-between;
       align-items:center;
-      text-align:center;
-      padding:120px 20px 40px;
+      gap:60px;
     }
 
-    .profile-pic{
-      width:180px;
-      height:180px;
-      border-radius:50%;
-      border:4px solid #00ff99;
-      margin-bottom:30px;
-      object-fit:cover;
-      box-shadow:0 0 35px rgba(0,255,153,0.5);
+    .hero-left{
+      flex:1;
+    }
+
+    .hero-right{
+      flex:1;
+      display:flex;
+      justify-content:center;
     }
 
     .hero h1{
-      font-size:clamp(3rem,8vw,5.5rem);
+      font-family:'Playfair Display',serif;
+      font-size:clamp(3rem,7vw,5.5rem);
+      line-height:1.1;
       margin-bottom:20px;
     }
 
     #typing{
-      color:#00ff99;
-      text-shadow:0 0 20px #00ff99;
-      border-right:3px solid #00ff99;
+      color:var(--gold);
+      text-shadow:0 0 15px rgba(212,175,55,0.4);
+      border-right:3px solid var(--gold);
       padding-right:5px;
       animation:blink 0.7s infinite;
     }
@@ -100,41 +156,86 @@
       }
     }
 
-    .hero p{
-      color:#c0c0c0;
-      max-width:800px;
-      line-height:1.8;
-      font-size:1.15rem;
+    .hero-subtitle{
+      color:var(--gold);
+      font-size:1.2rem;
+      margin-bottom:18px;
+      letter-spacing:1px;
+    }
+
+    .hero-description{
+      color:var(--muted);
+      max-width:700px;
+      line-height:1.9;
+      font-size:1.05rem;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      margin-top:35px;
     }
 
     .btn{
-      margin-top:35px;
-      padding:15px 35px;
+      padding:15px 32px;
       border:none;
-      border-radius:12px;
-      background:#00ff99;
+      border-radius:14px;
+      background:var(--gold);
       color:black;
-      font-weight:bold;
+      font-weight:600;
+      text-decoration:none;
       cursor:pointer;
-      transition:0.3s;
-      box-shadow:0 0 25px rgba(0,255,153,0.4);
+      transition:0.35s ease;
+      box-shadow:0 10px 25px rgba(212,175,55,0.15);
     }
 
     .btn:hover{
       transform:translateY(-5px);
-      box-shadow:0 0 35px rgba(0,255,153,0.8);
+      box-shadow:0 15px 35px rgba(212,175,55,0.25);
     }
 
+    .secondary-btn{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.15);
+      color:var(--white);
+    }
+
+    .secondary-btn:hover{
+      border-color:var(--gold);
+      color:var(--gold);
+    }
+
+    .profile-pic{
+      width:340px;
+      height:340px;
+      border-radius:30px;
+      object-fit:cover;
+      border:2px solid rgba(212,175,55,0.25);
+      box-shadow:0 25px 60px rgba(0,0,0,0.45);
+    }
+
+    /* Sections */
+
     section{
-      padding:100px 8%;
+      padding:110px 8%;
     }
 
     .section-title{
+      font-family:'Playfair Display',serif;
       text-align:center;
       font-size:3rem;
-      margin-bottom:50px;
-      color:#00ff99;
+      color:var(--gold);
+      margin-bottom:18px;
     }
+
+    .section-subtitle{
+      text-align:center;
+      color:var(--muted);
+      margin-bottom:55px;
+    }
+
+    /* Cards */
 
     .card-grid{
       display:grid;
@@ -143,73 +244,163 @@
     }
 
     .card{
-      background:rgba(255,255,255,0.05);
+      background:rgba(255,255,255,0.04);
       border:1px solid rgba(255,255,255,0.08);
-      backdrop-filter:blur(10px);
-      padding:30px;
-      border-radius:20px;
-      transition:0.3s;
+      backdrop-filter:blur(18px);
+      padding:32px;
+      border-radius:24px;
+      transition:all 0.35s ease;
     }
 
     .card:hover{
-      transform:translateY(-10px);
-      border-color:#00ff99;
-      box-shadow:0 0 30px rgba(0,255,153,0.15);
+      transform:translateY(-8px);
+      border-color:rgba(212,175,55,0.4);
+      box-shadow:0 15px 40px rgba(212,175,55,0.12);
     }
 
     .card h3{
-      color:#00ff99;
-      margin-bottom:15px;
+      color:var(--gold);
+      margin-bottom:16px;
+      font-size:1.35rem;
     }
 
     .card p{
-      color:#c7c7c7;
-      line-height:1.7;
+      color:var(--muted);
+      line-height:1.8;
     }
 
     .vision{
       max-width:900px;
       margin:auto;
       text-align:center;
-      color:#c7c7c7;
+      color:var(--muted);
       line-height:1.9;
       font-size:1.1rem;
     }
 
-    footer{
-      text-align:center;
-      padding:30px;
-      color:#888;
-      border-top:1px solid rgba(255,255,255,0.08);
+    /* Timeline */
+
+    .timeline{
+      max-width:900px;
+      margin:auto;
+      display:flex;
+      flex-direction:column;
+      gap:30px;
+      position:relative;
     }
 
-    .bg-circle{
-      position:fixed;
-      width:500px;
-      height:500px;
-      background:#00ff99;
-      opacity:0.08;
-      filter:blur(120px);
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:20px;
+      top:0;
+      width:2px;
+      height:100%;
+      background:rgba(212,175,55,0.25);
+    }
+
+    .timeline-item{
+      position:relative;
+      padding-left:70px;
+    }
+
+    .timeline-item::before{
+      content:"";
+      position:absolute;
+      left:10px;
+      top:8px;
+      width:20px;
+      height:20px;
       border-radius:50%;
-      z-index:-1;
+      background:var(--gold);
+      box-shadow:0 0 20px rgba(212,175,55,0.4);
     }
 
-    .circle1{
-      top:-100px;
-      left:-100px;
+    .timeline-item h3{
+      color:var(--gold);
+      margin-bottom:10px;
+      font-size:1.3rem;
     }
 
-    .circle2{
-      bottom:-100px;
-      right:-100px;
+    .timeline-item p{
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    /* Contact */
+
+    .contact-box{
+      max-width:700px;
+      margin:auto;
+      text-align:center;
+    }
+
+    .contact-box p{
+      margin-bottom:20px;
+      color:var(--muted);
+      font-size:1.05rem;
     }
 
     .email{
-      color:#00ff99;
+      color:var(--gold);
       text-decoration:none;
     }
 
-    @media(max-width:900px){
+    /* Footer */
+
+    footer{
+      padding:50px 8%;
+      border-top:1px solid rgba(255,255,255,0.08);
+      text-align:center;
+    }
+
+    footer h3{
+      font-family:'Playfair Display',serif;
+      color:var(--gold);
+      margin-bottom:10px;
+      font-size:2rem;
+    }
+
+    footer p{
+      color:#94a3b8;
+      margin-bottom:15px;
+    }
+
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      margin:20px 0;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a{
+      color:var(--gold);
+      text-decoration:none;
+    }
+
+    .copyright{
+      margin-top:20px;
+      font-size:0.95rem;
+      color:#64748b;
+    }
+
+    /* Responsive */
+
+    @media(max-width:1000px){
+
+      .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+      }
+
+      .hero-description{
+        margin:auto;
+      }
+
+      .hero-buttons{
+        justify-content:center;
+      }
 
       nav{
         flex-direction:column;
@@ -217,15 +408,24 @@
       }
 
       nav ul{
-        gap:15px;
+        justify-content:center;
       }
 
-      .hero p{
-        font-size:1rem;
-      }
+    }
+
+    @media(max-width:700px){
 
       .section-title{
-        font-size:2.2rem;
+        font-size:2.3rem;
+      }
+
+      .profile-pic{
+        width:260px;
+        height:260px;
+      }
+
+      .hero{
+        padding-top:180px;
       }
 
     }
@@ -236,66 +436,163 @@
 
 <body>
 
+  <!-- Background -->
+
   <div class="bg-circle circle1"></div>
   <div class="bg-circle circle2"></div>
 
+  <!-- Navbar -->
+
   <nav>
 
-    <h2>Vihaan Gupta</h2>
+    <h2>VG</h2>
 
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#interests">Interests</a></li>
       <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#vision">Vision</a></li>
-      <li><a href="#dream">Dream</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
   </nav>
 
+  <!-- Hero -->
+
   <section class="hero">
 
-    <img
-      src="dps.jpg"
-      alt="Vihaan Gupta"
-      class="profile-pic"
-    >
+    <div class="hero-left">
 
-    <h1>
-      Future <span id="typing"></span>
-    </h1>
+      <h1>
+        Future <span id="typing"></span>
+      </h1>
 
-    <p>
-      Commerce Student & Future CGO/CFO
-    </p>
+      <p class="hero-subtitle">
+        Commerce Student • Finance Enthusiast • Aspiring Corporate Leader
+      </p>
 
-    <button class="btn" onclick="scrollToSection('projects')">
-      Explore Portfolio
-    </button>
+      <p class="hero-description">
+        Building toward a future in finance, governance, entrepreneurship,
+        and strategic leadership through business projects, learning,
+        and long-term vision.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button
+          class="btn"
+          onclick="scrollToSection('projects')"
+        >
+          Explore Portfolio
+        </button>
+
+        <a
+          href="resume.pdf"
+          download
+          class="btn secondary-btn"
+        >
+          Download Resume
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-right">
+
+      <img
+        src="dps.jpg"
+        alt="Vihaan Gupta"
+        class="profile-pic"
+      >
+
+    </div>
 
   </section>
+
+  <!-- About -->
 
   <section id="about">
 
     <h2 class="section-title">About Me</h2>
 
+    <p class="section-subtitle">
+      Passionate about finance, governance, entrepreneurship, and leadership.
+    </p>
+
     <div class="vision">
 
       <p>
-        My name is Vihaan Gupta. I am passionate about finance,
-        corporate governance, investing, entrepreneurship,
-        and business leadership.
+        My name is Vihaan Gupta. I am a commerce student deeply interested in
+        finance, investing, corporate governance, entrepreneurship, and business
+        strategy. I aim to build a long-term career in the corporate and financial
+        world while continuously improving my leadership, communication,
+        and analytical skills.
       </p>
 
     </div>
 
   </section>
 
+  <!-- Skills -->
+
+  <section id="skills">
+
+    <h2 class="section-title">Skills & Competencies</h2>
+
+    <p class="section-subtitle">
+      Areas I am actively learning and developing.
+    </p>
+
+    <div class="card-grid">
+
+      <div class="card">
+
+        <h3>Finance</h3>
+
+        <p>
+          Financial Analysis, Investing, Business Strategy,
+          Accounting Concepts, Corporate Governance
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Technical</h3>
+
+        <p>
+          MS Excel, PowerPoint, Website Development,
+          Research, Presentation Design
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Professional</h3>
+
+        <p>
+          Leadership, Public Speaking,
+          Communication, Team Collaboration
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Projects -->
+
   <section id="projects">
 
     <h2 class="section-title">Projects</h2>
+
+    <p class="section-subtitle">
+      Building ideas around finance and business systems.
+    </p>
 
     <div class="card-grid">
 
@@ -304,22 +601,35 @@
         <h3>Fintrek</h3>
 
         <p>
-          <strong>Status:</strong> Working On
+          <strong>Status:</strong> In Development
         </p>
 
         <br>
 
         <p>
-          An all-in-one business accounting software that helps
-          Indian businesses manage bookkeeping, GST compliance,
-          invoicing, inventory, and payroll from a single platform.
+          Fintrek is an all-in-one accounting and business management
+          platform designed for Indian businesses.
+        </p>
+
+        <br>
+
+        <p>
+          The platform aims to simplify GST compliance,
+          bookkeeping, invoicing, payroll management,
+          and inventory tracking within one unified ecosystem.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>My Role:</strong> Founder & Product Vision
         </p>
 
       </div>
 
       <div class="card">
 
-        <h3>Personal Portfolio Website</h3>
+        <h3>Portfolio Website</h3>
 
         <p>
           <strong>Status:</strong> Completed
@@ -328,9 +638,9 @@
         <br>
 
         <p>
-          A professional commerce-themed personal portfolio
-          showcasing my projects, achievements, goals,
-          and interests.
+          A modern finance-themed portfolio website
+          showcasing my projects, achievements,
+          goals, and professional journey.
         </p>
 
       </div>
@@ -339,165 +649,264 @@
 
   </section>
 
-  <section id="interests">
-
-    <h2 class="section-title">Extracurricular Interests</h2>
-
-    <div class="card-grid">
-
-      <div class="card">
-        <h3>Investing</h3>
-      </div>
-
-      <div class="card">
-        <h3>Acting</h3>
-      </div>
-
-      <div class="card">
-        <h3>Public Speaking</h3>
-      </div>
-
-      <div class="card">
-        <h3>Finance Research</h3>
-      </div>
-
-      <div class="card">
-        <h3>Fashion</h3>
-      </div>
-
-      <div class="card">
-        <h3>Fitness</h3>
-      </div>
-
-      <div class="card">
-        <h3>Cricket</h3>
-      </div>
-
-    </div>
-
-  </section>
+  <!-- Achievements -->
 
   <section id="achievements">
 
     <h2 class="section-title">Achievements</h2>
 
+    <p class="section-subtitle">
+      Experiences and accomplishments shaping my journey.
+    </p>
+
     <div class="card-grid">
 
       <div class="card">
+
         <h3>Theatron 2025</h3>
-        <p>3rd Prize in Mime at DPS RK Puram.</p>
+
+        <p>
+          Secured 3rd Prize in Mime at DPS RK Puram.
+        </p>
+
       </div>
 
       <div class="card">
+
         <h3>Confluence 2023</h3>
-        <p>2nd Prize in Personnalité Française.</p>
+
+        <p>
+          Secured 2nd Prize in Personnalité Française.
+        </p>
+
       </div>
 
       <div class="card">
+
         <h3>Portfolio Website</h3>
-        <p>Built and deployed personal portfolio website.</p>
+
+        <p>
+          Designed and deployed a personal portfolio website using HTML and CSS.
+        </p>
+
       </div>
 
     </div>
 
   </section>
+
+  <!-- Vision -->
 
   <section id="vision">
 
     <h2 class="section-title">My Vision</h2>
 
+    <p class="section-subtitle">
+      Long-term goals and ambitions.
+    </p>
+
     <div class="vision">
 
       <p>
-        I want to build a career in finance and corporate governance,
-        and eventually become a CGO or CFO.
+        I aspire to build a strong career in finance,
+        governance, entrepreneurship, and corporate leadership,
+        eventually becoming a CFO or CGO while contributing
+        to impactful business innovation.
       </p>
 
     </div>
 
   </section>
 
-  <section id="dream">
+  <!-- Roadmap -->
 
-    <h2 class="section-title">Dream Colleges & Exams</h2>
+  <section id="roadmap">
 
-    <div class="card-grid">
+    <h2 class="section-title">Career Roadmap</h2>
 
-      <div class="card">
-        <h3>SRCC</h3>
+    <p class="section-subtitle">
+      The path I aim to build over the coming years.
+    </p>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <h3>Present</h3>
+
+        <p>
+          Commerce student building leadership,
+          finance, and communication skills.
+        </p>
+
       </div>
 
-      <div class="card">
-        <h3>DU</h3>
+      <div class="timeline-item">
+
+        <h3>Short Term</h3>
+
+        <p>
+          CUET preparation • CA Foundation • Business projects • Internships
+        </p>
+
       </div>
 
-      <div class="card">
-        <h3>IICA</h3>
-      </div>
+      <div class="timeline-item">
 
-      <div class="card">
-        <h3>CA</h3>
-      </div>
+        <h3>Long Term</h3>
 
-      <div class="card">
-        <h3>CUET</h3>
+        <p>
+          Corporate leadership • Entrepreneurship • CFO / CGO
+        </p>
+
       </div>
 
     </div>
 
   </section>
+
+  <!-- Academic Goals -->
+
+  <section id="goals">
+
+    <h2 class="section-title">Academic Goals</h2>
+
+    <p class="section-subtitle">
+      Institutions and qualifications I aim toward.
+    </p>
+
+    <div class="card-grid">
+
+      <div class="card">
+
+        <h3>SRCC / DU</h3>
+
+        <p>
+          Aspiring to pursue commerce and finance education
+          at top institutions.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>CA Journey</h3>
+
+        <p>
+          Working toward Chartered Accountancy
+          and advanced financial expertise.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>CUET</h3>
+
+        <p>
+          Focused preparation for competitive undergraduate admissions.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact -->
 
   <section id="contact">
 
     <h2 class="section-title">Contact</h2>
 
-    <div class="vision">
+    <p class="section-subtitle">
+      Open to collaboration, networking, and opportunities.
+    </p>
+
+    <div class="contact-box">
 
       <p>
+
         Email:
-        <a class="email" href="mailto:vihaan27gupta@gmail.com">
+        <a
+          class="email"
+          href="mailto:vihaan27gupta@gmail.com"
+        >
           vihaan27gupta@gmail.com
         </a>
+
       </p>
 
-      <br>
-
       <p>
+
         Phone:
-        <a class="email" href="tel:+919266490145">
+        <a
+          class="email"
+          href="tel:+919266490145"
+        >
           +91 92664 90145
         </a>
+
       </p>
 
-      <br>
-
       <p>
+
         LinkedIn:
         <a
           class="email"
           href="https://www.linkedin.com/in/vihaan-gupta-23874540b/"
           target="_blank"
         >
-          View My LinkedIn Profile
+          View LinkedIn Profile
         </a>
+
       </p>
 
     </div>
 
   </section>
 
+  <!-- Footer -->
+
   <footer>
-    © 2026 Vihaan Gupta • Commerce Portfolio
+
+    <h3>Vihaan Gupta</h3>
+
+    <p>
+      Commerce Student • Finance Enthusiast • Future Corporate Leader
+    </p>
+
+    <div class="footer-links">
+
+      <a
+        href="https://www.linkedin.com/in/vihaan-gupta-23874540b/"
+        target="_blank"
+      >
+        LinkedIn
+      </a>
+
+      <a href="mailto:vihaan27gupta@gmail.com">
+        Email
+      </a>
+
+    </div>
+
+    <p class="copyright">
+      © 2026 Vihaan Gupta. All rights reserved.
+    </p>
+
   </footer>
+
+  <!-- JavaScript -->
 
   <script>
 
     const text = [
-      "CGO",
       "CFO",
-      "Commerce Leader",
-      "Finance Enthusiast",
-      "Entrepreneur"
+      "CGO",
+      "Finance Leader",
+      "Entrepreneur",
+      "Corporate Strategist"
     ];
 
     let count = 0;
@@ -520,6 +929,7 @@
       if(letter.length === currentText.length){
 
         count++;
+
         index = 0;
 
         setTimeout(type,1200);
