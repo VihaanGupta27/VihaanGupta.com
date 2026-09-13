@@ -17,17 +17,14 @@
   <link rel="icon" href="favicon.ico" />
 
   <!-- Google Fonts -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
     rel="stylesheet"
   >
 
   <style>
-
     *{
       margin:0;
       padding:0;
@@ -85,7 +82,7 @@
       justify-content:space-between;
       align-items:center;
       background:rgba(10,15,30,0.7);
-      backdrop-filter:blur(14px);
+      backdrop-filter:blur(144px);
       border-bottom:1px solid rgba(255,255,255,0.06);
       z-index:1000;
     }
@@ -121,7 +118,7 @@
       min-height:100vh;
       padding:140px 8% 80px;
       display:flex;
-      justify-content:space-between;
+      justify-space:between;
       align-items:center;
       gap:60px;
     }
@@ -180,6 +177,7 @@
       cursor:pointer;
       transition:0.35s ease;
       box-shadow:0 10px 25px rgba(212,175,55,0.15);
+      display:inline-block;
     }
 
     .btn:hover{
@@ -319,7 +317,7 @@
       line-height:1.8;
     }
 
-    /* Contact */
+    /* Contact & Footer */
 
     .contact-box{
       max-width:700px;
@@ -337,8 +335,6 @@
       color:var(--gold);
       text-decoration:none;
     }
-
-    /* Footer */
 
     footer{
       padding:50px 8%;
@@ -376,8 +372,6 @@
       font-size:0.95rem;
       color:#64748b;
     }
-
-    /* Responsive */
 
     @media(max-width:1000px){
 
@@ -429,12 +423,10 @@
 <body>
 
   <!-- Background -->
-
   <div class="bg-circle circle1"></div>
   <div class="bg-circle circle2"></div>
 
   <!-- Navbar -->
-
   <nav>
 
     <h2>VG</h2>
@@ -450,8 +442,7 @@
 
   </nav>
 
-  <!-- Hero -->
-
+  <!-- Hero Section -->
   <section class="hero">
 
     <div class="hero-left">
@@ -479,10 +470,9 @@
           Explore Portfolio
         </button>
 
-        <!-- PERFECT PDF BUTTON -->
-
+        <!-- UPDATED RESUME LINK -->
         <a
-          href="./Resume.pdf"
+          href="./resume_updated.pdf"
           target="_blank"
           class="btn secondary-btn"
         >
@@ -495,10 +485,12 @@
 
     <div class="hero-right">
 
+      <!-- UPDATED PROFILE PHOTO SOURCE -->
       <img
-        src="dps.jpg"
+        src="profile.jpg"
         alt="Vihaan Gupta"
         class="profile-pic"
+        onerror="this.onerror=null; this.src='https://placehold.co/340x340/0b1120/d4af37?text=Vihaan+Gupta';"
       >
 
     </div>
@@ -506,13 +498,12 @@
   </section>
 
   <!-- About -->
-
   <section id="about">
 
     <h2 class="section-title">About Me</h2>
 
     <p class="section-subtitle">
-      Passionate about finance, governance, entrepreneurship, and leadership.
+      Passionately focused on finance, governance, entrepreneurship, and strategic leadership.
     </p>
 
     <div class="vision">
@@ -523,9 +514,8 @@
         leadership. I enjoy understanding how businesses operate,
         how financial systems function, and how strategic decisions
         drive long-term growth and success. Alongside academics,
-        I am actively developing my skills through independent projects
-        such as Fintrek, an accounting and business management platform
-        concept for Indian businesses, while also building my personal
+        I am actively developing my skills through independent academic research
+        focused on corporate finance and financial strategy, while also building my personal
         portfolio and strengthening my knowledge of business strategy,
         finance, and communication. I actively participate in
         extracurricular activities including theatre and public speaking,
@@ -538,7 +528,6 @@
   </section>
 
   <!-- Skills -->
-
   <section id="skills">
 
     <h2 class="section-title">Skills & Competencies</h2>
@@ -586,45 +575,36 @@
 
   </section>
 
-  <!-- Projects -->
-
+  <!-- Projects Section -->
   <section id="projects">
 
     <h2 class="section-title">Projects</h2>
 
     <p class="section-subtitle">
-      Building ideas around finance and business systems.
+      Building ideas and research around finance and business systems.
     </p>
 
     <div class="card-grid">
 
+      <!-- UPDATED PROJECT: Research Paper in Progress -->
       <div class="card">
 
-        <h3>Fintrek</h3>
+        <h3>Research Paper in Progress</h3>
 
         <p>
-          <strong>Status:</strong> In Development
+          <strong>Status:</strong> In Progress
         </p>
 
         <br>
 
         <p>
-          Fintrek is an all-in-one accounting and business
-          management platform designed for Indian businesses.
+          Focuses on corporate finance, market trends, or financial strategy.
         </p>
 
         <br>
 
         <p>
-          The platform aims to simplify GST compliance,
-          bookkeeping, invoicing, payroll management,
-          and inventory tracking within one unified ecosystem.
-        </p>
-
-        <br>
-
-        <p>
-          <strong>My Role:</strong> Founder & Product Vision
+          <strong>My Role:</strong> Author & Lead Researcher
         </p>
 
       </div>
@@ -651,7 +631,6 @@
   </section>
 
   <!-- Achievements -->
-
   <section id="achievements">
 
     <h2 class="section-title">Achievements</h2>
@@ -697,7 +676,6 @@
   </section>
 
   <!-- Vision -->
-
   <section id="vision">
 
     <h2 class="section-title">My Vision</h2>
@@ -720,7 +698,6 @@
   </section>
 
   <!-- Roadmap -->
-
   <section id="roadmap">
 
     <h2 class="section-title">Career Roadmap</h2>
@@ -768,7 +745,6 @@
   </section>
 
   <!-- Academic Goals -->
-
   <section id="goals">
 
     <h2 class="section-title">Academic Goals</h2>
@@ -817,7 +793,6 @@
   </section>
 
   <!-- Contact -->
-
   <section id="contact">
 
     <h2 class="section-title">Contact</h2>
@@ -829,7 +804,6 @@
     <div class="contact-box">
 
       <p>
-
         Email:
         <a
           class="email"
@@ -837,23 +811,9 @@
         >
           vihaan27gupta@gmail.com
         </a>
-
       </p>
 
       <p>
-
-        Phone:
-        <a
-          class="email"
-          href="tel:+919266490145"
-        >
-          +91 92664 90145
-        </a>
-
-      </p>
-
-      <p>
-
         LinkedIn:
         <a
           class="email"
@@ -862,7 +822,6 @@
         >
           View LinkedIn Profile
         </a>
-
       </p>
 
     </div>
@@ -870,7 +829,6 @@
   </section>
 
   <!-- Footer -->
-
   <footer>
 
     <h3>Vihaan Gupta</h3>
@@ -901,15 +859,11 @@
   </footer>
 
   <script>
-
     function scrollToSection(id){
-
       document.getElementById(id).scrollIntoView({
         behavior:"smooth"
       });
-
     }
-
   </script>
 
 </body>
